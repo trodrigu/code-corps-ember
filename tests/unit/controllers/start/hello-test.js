@@ -10,8 +10,28 @@ moduleFor('controller:start/hello', 'Unit | Controller | start/hello', {
   ]
 });
 
-// Replace this with your real tests.
 test('it exists', function(assert) {
+  assert.expect(3);
   let controller = this.subject();
-  assert.ok(controller);
+
+  controller.uploadingImage = true;
+
+  controller.loadingBar = {
+    stop() {
+      assert.ok(true);
+    }
+  };
+
+  controller.flashMessages = {
+    clearMessages() {
+      return this;
+    },
+    danger() {
+      assert.ok(true);
+    }
+  };
+
+  controller.uploadErrored();
+
+  assert.notOk(controller.uploadingImage);
 });
