@@ -2303,7 +2303,7 @@ ember-cli-babel@5.2.4, ember-cli-babel@^5.0.0, ember-cli-babel@^5.1.10, ember-cl
     ember-cli-version-checker "^1.0.2"
     resolve "^1.1.2"
 
-ember-cli-babel@^6.0.0-alpha.8, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.0.0-beta.9:
+ember-cli-babel@^6.0.0-alpha.8, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.5, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.0.0-beta.9:
   version "6.0.0-beta.9"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.0.0-beta.9.tgz#b597d52f12d4429cd5716b55f749ebf6144b7b16"
   dependencies:
@@ -3171,6 +3171,13 @@ ember-power-select@1.6.1:
     ember-concurrency "^0.7.15"
     ember-text-measurer "^0.3.3"
     ember-truth-helpers "^1.3.0"
+
+ember-prism@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/ember-prism/-/ember-prism-0.0.8.tgz#c3a2a2e79b60e4d39601153924acc639c97a6d05"
+  dependencies:
+    ember-cli-babel "^5.1.3"
+    ember-cli-htmlbars "^1.0.0"
 
 ember-qunit@^2.0.0-beta.1:
   version "2.1.0"
