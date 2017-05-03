@@ -28,3 +28,11 @@ test('validates some random "state" as incorrect', function(assert) {
   let service = this.subject();
   assert.notOk(service.validate(state), 'Validation failed.');
 });
+
+test('validates undefined and null as incorrect, even though stored state is also undefined', function(assert) {
+  assert.expect(2);
+
+  let service = this.subject();
+  assert.notOk(service.validate(undefined), 'Validation failed for undefined.');
+  assert.notOk(service.validate(null), 'Validation failed for null.');
+});

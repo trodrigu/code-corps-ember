@@ -67,6 +67,7 @@ export default Service.extend({
    * @public
    */
   validate(stateToCheck) {
-    return stateToCheck === get(this, 'session.data.githubState');
+    let state = get(this, 'session.data.githubState');
+    return state && state === stateToCheck;
   }
 });
