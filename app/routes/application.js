@@ -9,7 +9,8 @@ const {
   inject: { service },
   isPresent,
   Route,
-  set
+  set,
+  on
 } = Ember;
 
 export default Route.extend(ApplicationRouteMixin, LoadingBar, {
@@ -265,5 +266,11 @@ export default Route.extend(ApplicationRouteMixin, LoadingBar, {
     get(this, 'metrics').trackEvent({
       event: 'Signed In'
     });
-  }
+  },
+
+  captureMessageOnActivate: on('activate', function() {
+    let currentUserId = get(this, 'currentUser.user.id');
+    let currentUserName = get(this, 'currentUser.user.name');
+    this.get('raven').callRaven('setUserContext', { id: currentUserId, name: currentUserName });
+  })
 });
